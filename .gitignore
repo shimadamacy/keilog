@@ -1,0 +1,4 @@
+**/*.pyc
+kei.log
+scancache.json
+*mylogfile.txt

@@ -1194,6 +1194,7 @@ class BrouteReader ( Worker ):
                     tvalue = hex_to_signed_int(tphase) * 0.1 # アンペア
                     self.record_que.put(['BR', 'E8R', rvalue, 'X'])
                     self.record_que.put(['BR', 'E8T', tvalue, 'X'])
+                    self.record_que.put(['BR', 'E8', rvalue+tvalue, 'X'])
 
                 elif epc in ['E0','E3']: # 積算電力量（正／負）
                     value = getvalue(edt)
